@@ -25,22 +25,29 @@ function App() {
     <Route path='/' element={<Login/>}/>
     <Route path='/regester' element={<Signup/>}/>
     <Route path='/Home' element={
-      
+      <Guard>
       <Home/>
+      </Guard>
       
       }/>
       <Route path='/changepasswrod' element={
-        
+        <Guard>
         <ChangePassword/>
+        </Guard>
         
       }/>
 
       <Route path='/questioner' element={
-        
+        <Guard>
         <Questioner/>
+        </Guard>
         
       }/>
-      <Route path='/questioner/:id' element={<QuestionerDetails/>}/>
+      <Route path='/questioner/:id' element={
+        <Guard>
+        <QuestionerDetails/>
+        </Guard>
+        }/>
       
     </Routes> 
     

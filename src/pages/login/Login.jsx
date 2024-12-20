@@ -8,18 +8,17 @@ import { jwtDecode } from 'jwt-decode';
 import { userContext } from '../../ctx/contextProvider.jsx';
 import { loginContext } from '../../ctx/loginProvider.jsx';
 import Cookies from 'js-cookie'
+import { apiUrl } from '../../utils.js';
 
 const Login = () => {
   const {userName,setUserName}=useContext(userContext);
   const {logIn,setLogIn}=useContext(loginContext);
   const [formData,setFormData] =useState({email:'',password:''});
   const navigation=useNavigate();
-  console.log(userName)
-  console.log(logIn)
 async  function handelSubmit(event) {
 event.preventDefault();
 try{
-  const req= await   axios.post('https://5778-41-46-25-30.ngrok-free.app/login',formData,config)
+  const req= await   axios.post(`${apiUrl}/login`,formData,config)
  
   if(req.status===201){
     let token=req.data.access_token

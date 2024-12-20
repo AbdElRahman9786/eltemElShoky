@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { config } from '../../App';
+import { apiUrl } from '../../utils';
 
 const Signup = () => {
   const [formData,setFormData]=useState({email:'',password:'',username:'',firstName:'',lastName:'',});
@@ -13,7 +14,7 @@ const Signup = () => {
 async  function handelSubmit(event) {
     event.preventDefault();
     try{
- const req= await   axios.post('http://127.0.0.1:5000/signup',formData,config)
+ const req= await   axios.post(`${apiUrl}/signup`,formData,config)
 
  if(req.status===201){
    Swal.fire({

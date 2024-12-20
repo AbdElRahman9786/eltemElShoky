@@ -4,11 +4,12 @@ import style from './questioner.module.css'
 import axios from 'axios';
 import {config} from '../../App.jsx'
 import { Link } from 'react-router-dom';
+import { apiUrl } from '../../utils.js';
 
 const Questioner = () => {
     const [questioner,setQuestioner]=useState([]);
     useEffect(()=>{
-        axios.get('https://5778-41-46-25-30.ngrok-free.app/questionaire',config).then((res)=>setQuestioner(res.data.questionnaires));
+        axios.get(`${apiUrl}/questionaire`,config).then((res)=>setQuestioner(res.data.questionnaires));
     },[])
     console.log(questioner);
   return (

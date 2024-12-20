@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import Cookies from 'js-cookie';
 import { Navbar } from '../../components/Navbar/Navbar';
 import style from './questioner.module.css'
+import { apiUrl } from '../../utils';
 
 const QuestionerDetails = () => {
     const [question,setQusetion] =useState([]);
@@ -18,7 +19,7 @@ const QuestionerDetails = () => {
         },
       };
     useEffect(()=>{
-        axios.get(`https://5778-41-46-25-30.ngrok-free.app/questionaire/${id}/questions`,config)
+        axios.get(`${apiUrl}/questionaire/${id}/questions`,config)
         .then((res)=>setQusetion(res.data.questions))
     },[])
     console.log(question)

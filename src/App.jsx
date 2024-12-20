@@ -8,6 +8,7 @@ import Guard from './components/Gurd';
 import ChangePassword from './pages/changepassword/ChangePassword';
 import Questioner from './pages/questioner/Questioner';
 import QuestionerDetails from './pages/questinerDetails/QuestionerDetails';
+import MangeAccount from './pages/mangeAcc/MangeAccount';
 export const config = {
   headers: {
     "Content-Type": "application/json",
@@ -47,6 +48,12 @@ function App() {
         <Guard>
         <QuestionerDetails/>
         </Guard>
+        }/>
+
+        <Route path='/AccountInfo' element={
+          <Guard>
+            <MangeAccount/>
+          </Guard>
         }/>
       
     </Routes> 

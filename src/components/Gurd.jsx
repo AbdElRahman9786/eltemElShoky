@@ -16,7 +16,7 @@ export default function Guard({children}){
 if(!logIn&&!token){
     navigate('/')
 }
-    },[token])
+    },[])
 
     return children;
 

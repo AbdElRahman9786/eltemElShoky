@@ -4,6 +4,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import Swal from 'sweetalert2';
+import { apiUrl } from '../../utils';
 
 const ChangePassword = () => {
     const [formData,setFormData]=useState({oldPassword:'',newPassword:''})
@@ -18,7 +19,7 @@ const ChangePassword = () => {
  async function handelSubmit(event){
         event.preventDefault();
         try{
-  const req=await axios.put('http://127.0.0.1:5000/Account/reset-password',formData,config);
+  const req=await axios.put(`${apiUrl}/Account/reset-password`,formData,config);
   if(req.status===200){
     Swal.fire({
         icon: "success",

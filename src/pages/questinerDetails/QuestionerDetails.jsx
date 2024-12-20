@@ -10,7 +10,7 @@ const QuestionerDetails = () => {
     const [question,setQusetion] =useState([]);
     const {id}=useParams();
     const token=Cookies.get('token');
-     const config = {
+  const config = {
         headers: {
           "Content-Type": "application/json",
           "ngrok-skip-browser-warning":'hello',

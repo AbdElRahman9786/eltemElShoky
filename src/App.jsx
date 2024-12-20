@@ -9,6 +9,8 @@ import ChangePassword from './pages/changepassword/ChangePassword';
 import Questioner from './pages/questioner/Questioner';
 import QuestionerDetails from './pages/questinerDetails/QuestionerDetails';
 import MangeAccount from './pages/mangeAcc/MangeAccount';
+import ChangeUserName from './pages/chamngeusername/ChangeUserName';
+import { Recomendation } from './pages/recomendation/Recomendation';
 export const config = {
   headers: {
     "Content-Type": "application/json",
@@ -55,7 +57,16 @@ function App() {
             <MangeAccount/>
           </Guard>
         }/>
-      
+      <Route path='/changeusername' element={
+        <Guard>
+          <ChangeUserName/>
+        </Guard>
+      }/>
+      <Route path='/Recomndation' element={
+        <Guard>
+          <Recomendation/>
+        </Guard>
+      }/>
     </Routes> 
     
     </>

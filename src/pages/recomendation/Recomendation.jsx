@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { apiUrl } from '../../utils'
 import Cookies from 'js-cookie';
 import styles from './recomendation.module.css'
+import { Navbar } from '../../components/Navbar/Navbar';
 export const Recomendation = () => {
     const [recomendation,setRecomendation]=useState('')
         const token=Cookies.get('token');
@@ -22,6 +23,7 @@ export const Recomendation = () => {
     console.log(recomendation.recommendations)
   return (
     <>
+    <Navbar/>
     <h1 className={styles.heading}>Recomendation</h1>
     <div className={styles.content}>
 

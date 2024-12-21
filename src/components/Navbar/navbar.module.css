@@ -8,16 +8,31 @@
     border-bottom: #9b1f53 solid 3px;
 }
 
-.contenair ul{
+.contenair .links{
     display: flex;
     align-items: center;
     gap: 30px;
     list-style: none;
 }
-.contenair ul li{
+.contenair .links li{
     font-size: 18px;
     font-weight:bold ;
     text-decoration: none;
     
 
+}
+.menue{
+    font-size: 35px;
+    cursor: pointer;
+}
+@media (max-width: 1008px) {
+    .links{
+        display: none !important;;
+    }
+    
+}
+@media (min-width:1008px){
+    .menue{
+        display: none;
+    }
 }

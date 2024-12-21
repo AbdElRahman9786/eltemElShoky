@@ -10,7 +10,7 @@ const Home = () => {
             <h1>Increase your<br/>
 attractiveness<br/>
 with us!</h1>
-<p>AI-Powered Scent Innovations</p>
+<h2>AI-Powered Scent Innovations</h2>
 <button className={style.btn4}>TRY NOW</button>
         </div>
         

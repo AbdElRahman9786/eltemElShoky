@@ -1,0 +1,32 @@
+ul{
+    list-style: none;
+}
+.mobnav{
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    animation: drop 3s ease-in-out;
+}
+@keyframes drop {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.exit{
+    text-align: end;
+    cursor: pointer;
+}

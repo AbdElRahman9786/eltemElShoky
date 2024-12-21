@@ -5,10 +5,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #725e6b;
+    background-color: black;
     padding: 50px;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 0px 4px #5E17EB;
     font-family: Arial, sans-serif;
     font-size: 18px;
     font-weight: bold;

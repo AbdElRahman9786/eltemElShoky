@@ -59,8 +59,11 @@ try{
         <div className={style.content}>
         <h1>Login</h1>
       <form onSubmit={handelSubmit}>
-        <input type='email' placeholder='Username' name='email' onChange={handleChange} required/>
-        <input type='password' placeholder='Password' name='password' onChange={handleChange} minLength={8}/>
+        <label>Email:</label>
+        <input type='email' placeholder='Enter Your Email...' name='email' onChange={handleChange} required/>
+        <label>Password:</label>
+        <input type='password' placeholder='Enter Your Password...' name='password' onChange={handleChange} minLength={8}/>
+
         <button type='submit' className={style.btn1}>Login</button>
         
       </form>

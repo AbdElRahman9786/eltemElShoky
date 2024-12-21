@@ -65,6 +65,7 @@ import axios from 'axios'
 import { apiUrl } from '../../utils'
 import Cookies from 'js-cookie';
 import { Link } from 'react-router-dom';
+import { Navbar } from '../../components/Navbar/Navbar';
 const token=Cookies.get('token');
 const config={
     headers:{
@@ -91,6 +92,7 @@ const MangeAccount = () => {
    
  
     <div >
+        <Navbar/>
         <h1 className={styles.header}>Welcom {account?.account?.firstName}</h1>
         <h2>Account Information</h2>
         <div className={styles.content}>

@@ -26,6 +26,7 @@ p{
     border: 1px solid #9b1f53;
     box-shadow: -1px -1px 16px #a05f74;
     border-radius: 10px;
+    flex-wrap: wrap;
 }
 .btns{
     display: flex;

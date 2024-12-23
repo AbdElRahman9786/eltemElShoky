@@ -6,7 +6,8 @@
 .content{
     display: flex;
     color: white;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
     align-items: center;
     padding: 30px;
     flex-wrap: wrap;
@@ -24,8 +25,8 @@
     margin-bottom: 10px;
     text-align: center;
     display: block;
-    word-wrap: break-word;  /* For legacy support */
-    word-break: break-word;
+    word-wrap: break-word;  
+   
 }
 .heading{
     color: white;

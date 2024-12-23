@@ -20,7 +20,7 @@ export const Recomendation = () => {
             setRecomendation(res.data)
         })
     },[])
-    console.log(recomendation.recommendations)
+    
   return (
     <>
     <div className={styles.all}>

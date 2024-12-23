@@ -49,6 +49,7 @@ const ChangePassword = () => {
 
     }
   return (
+    <div className={style.all}>
     <div className={style.card}>
     <div className={style.content}>
     <h1>Reset Password</h1>
@@ -59,6 +60,7 @@ const ChangePassword = () => {
     
   </form>
   </div>
+</div>
 </div>
   )
 

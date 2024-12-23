@@ -10,7 +10,9 @@ import Questioner from './pages/questioner/Questioner';
 import QuestionerDetails from './pages/questinerDetails/QuestionerDetails';
 import MangeAccount from './pages/mangeAcc/MangeAccount';
 import ChangeUserName from './pages/chamngeusername/ChangeUserName';
+import AddQuestions from '../src/pages/addQuestions/AddQuestions.jsx'
 import { Recomendation } from './pages/recomendation/Recomendation';
+import Dashboard from './pages/dashboard/dashboard';
 export const config = {
   headers: {
     "Content-Type": "application/json",
@@ -66,6 +68,12 @@ function App() {
         <Guard>
           <Recomendation/>
         </Guard>
+      }/>
+      <Route path='/dashboard' element={
+        <Dashboard/>
+      }/>
+       <Route path='/addquestions' element={
+        <AddQuestions/>
       }/>
     </Routes> 
     

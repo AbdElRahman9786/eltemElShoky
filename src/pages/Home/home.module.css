@@ -11,6 +11,9 @@
     font-size: xx-large;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.ai{
     text-align: start;
 }
 .btn4{
@@ -25,4 +28,10 @@
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 10px;
+}
+@media (max-width: 490px) {
+    .content{
+        font-size: small;
+    }
+    
 }

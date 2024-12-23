@@ -55,6 +55,7 @@ try{
     });
   }
   return (
+    <div className={style.all}>
     <div className={style.card}>
         <div className={style.content}>
         <h1>Login</h1>
@@ -69,6 +70,7 @@ try{
       </form>
       <Link className={style.link} to='/regester'>Regester</Link>
       </div>
+    </div>
     </div>
   )
 }

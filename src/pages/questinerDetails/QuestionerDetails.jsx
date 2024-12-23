@@ -22,7 +22,7 @@ const QuestionerDetails = () => {
         axios.get(`${apiUrl}/questionaire/${id}/questions`,config)
         .then((res)=>setQusetion(res.data.questions))
     },[])
-    console.log(question)
+    
   return (
     <div className={style.que}>
         <Navbar/>

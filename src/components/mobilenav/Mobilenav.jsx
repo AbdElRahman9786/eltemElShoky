@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styles from './mobilenav.module.css'
 import { Link } from 'react-router-dom'
 import { GoXCircleFill } from "react-icons/go";

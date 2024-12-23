@@ -11,8 +11,9 @@ const Questioner = () => {
     useEffect(()=>{
         axios.get(`${apiUrl}/questionaire`,config).then((res)=>setQuestioner(res.data.questionnaires));
     },[])
-    console.log(questioner);
+    
   return (
+    <div className={style.all}>
     <div className={style.Questioner}>
         <Navbar/>
         <h1 className={style.head}>Questioner</h1>
@@ -33,6 +34,7 @@ const Questioner = () => {
       
 
       </div>
+    </div>
     </div>
   )
 }

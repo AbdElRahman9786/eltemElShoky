@@ -23,6 +23,7 @@ export const Recomendation = () => {
     console.log(recomendation.recommendations)
   return (
     <>
+    <div className={styles.all}>
     <Navbar/>
     <h1 className={styles.heading}>Recomendation</h1>
     <div className={styles.content}>
@@ -33,6 +34,7 @@ export const Recomendation = () => {
                 <p className={styles.p}>{item.recommendation_text}</p>
             </div>
         ))}
+    </div>
     </div>
     </>
   )

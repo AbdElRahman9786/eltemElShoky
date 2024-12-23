@@ -48,8 +48,9 @@ Swal.fire({
         }
 
     }
-    console.log(username)
+    
   return (
+    <div className={style.all}>
        <div className={style.card}>
        <div className={style.content}>
        <h1>Reset username</h1>
@@ -60,6 +61,7 @@ Swal.fire({
        
      </form>
      </div>
+   </div>
    </div>
   )
 }

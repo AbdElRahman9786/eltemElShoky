@@ -1,3 +1,11 @@
+body{
+    background: rgb(73,63,78);
+    background: linear-gradient(356deg, rgba(73,63,78,1) 0%, rgba(94,23,235,1) 26%);
+    margin: 0;
+    padding: 0;
+}
+
+
 a{
     text-decoration: none;
     color: white;

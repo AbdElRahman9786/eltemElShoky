@@ -1,3 +1,8 @@
+.all{
+    background: rgb(73,63,78);
+    background: linear-gradient(356deg, rgba(73,63,78,1) 0%, rgba(94,23,235,1) 26%);
+    height: 100vh;
+}
 .header{
     font-size: xx-large;
     font-weight: bold;
@@ -23,8 +28,10 @@ p{
     display: flex;
     justify-content: space-evenly;
     gap: 30px;
-    border: 1px solid #9b1f53;
-    box-shadow: -1px -1px 16px #a05f74;
+    border: 1px solid #9AA6B2;
+    box-shadow:-4px 3px 7px 2px #a3b2c1;
+    width: 80%;
+    margin: 0 auto;
     border-radius: 10px;
     flex-wrap: wrap;
 }

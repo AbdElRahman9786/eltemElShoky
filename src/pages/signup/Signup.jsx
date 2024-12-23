@@ -51,6 +51,7 @@ async  function handelSubmit(event) {
   }
 
   return (
+    <div className={style.all}>
     <div className={style.card}>
     <div className={style.content}>
     <h1>Sign up</h1>
@@ -68,6 +69,7 @@ async  function handelSubmit(event) {
     <p className={style.back}>Already have an account? <Link to='/'>Login</Link></p>
   </form>
   </div>
+</div>
 </div>
   )
 }

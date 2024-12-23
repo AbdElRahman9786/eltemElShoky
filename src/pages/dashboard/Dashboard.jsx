@@ -10,8 +10,10 @@ const Dashboard = () => {
         <h1 className={styles.heading}>Admin dashboard</h1>
         <AddQuestioer/>
         <AddPerfum/>
-        <button><Link to='/addquestions'>Add Qusetions</Link></button>
-        <button><Link to='/Home'>Back</Link></button>
+        <div className={styles.buttonContainter}>
+       <button className={styles.btn} ><Link to='/addquestions'>Add Qusetions</Link></button>
+     <button className={styles.btn} ><Link to='/Home'>Back</Link></button>
+     </div>
     </div>
   )
 }

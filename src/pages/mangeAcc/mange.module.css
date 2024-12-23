@@ -1,7 +1,6 @@
 .all{
-    background: rgb(73,63,78);
-    background: linear-gradient(356deg, rgba(73,63,78,1) 0%, rgba(94,23,235,1) 26%);
-    height: 100vh;
+    min-height:100vh;
+    padding-bottom:20px;
 }
 .header{
     font-size: xx-large;

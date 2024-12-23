@@ -76,6 +76,7 @@ const QuestionnaireForm = () => {
   };
 
   return (
+    <div className={styles.all}>
     <div className={styles.Qcontainer}>
       <h1 className={styles.Qtitle}>Add Questions to Questionnaire</h1>
       <label htmlFor="questionnaire">Select Questionnaire:</label>
@@ -143,6 +144,7 @@ const QuestionnaireForm = () => {
       </table>
       <button onClick={addQuestion} className={styles.Qbutton}>Add Question</button>
       <button onClick={handleSubmit} className={styles.Qbutton}>Add</button>
+    </div>
     </div>
   );
 };

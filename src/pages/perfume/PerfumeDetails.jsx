@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { apiUrl } from '../../utils';
 import axios from 'axios';
 import styles from './perfume.module.css';
+import { Navbar } from '../../components/Navbar/Navbar.jsx';
 import {config} from '../../App.jsx'
 
 const PerfumeDetails = () => {
@@ -40,6 +41,7 @@ const PerfumeDetails = () => {
 
     return (
         <div className={styles.perfumePage}>
+              <Navbar/>
             <div className={styles.perfumeContent}>
                 <h1>{perfume.perfume_Name}</h1>
                 <img

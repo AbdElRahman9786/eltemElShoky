@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { apiUrl } from '../../utils';
 import axios from 'axios';
 import styles from './perfume.module.css';
+import { Navbar } from '../../components/Navbar/Navbar.jsx';
 import { config } from '../../App.jsx';
 
 const PerfumeList = () => {
@@ -30,6 +31,7 @@ const PerfumeList = () => {
 
     return (
         <div className={styles.perfumePage}>
+              <Navbar/>
             <div className={styles.perfumeContent}>
                 <h1>Perfumes</h1>
                 {error && <p className={styles.errorMessage}>{error}</p>}

@@ -7,13 +7,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30rem;
+    
 
 }
 .content {
     background: rgb(73,63,78);
 background: linear-gradient(356deg, rgba(73,63,78,1) 0%, rgba(94,23,235,1) 26%);
-    padding: 50px;
+    padding: 90px;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
     text-align: center;
@@ -22,7 +22,7 @@ background: linear-gradient(356deg, rgba(73,63,78,1) 0%, rgba(94,23,235,1) 26%);
     font-weight: bold;
     color: black;
     max-width: 100%;
-    /* box-shadow: 0px 0px 0px 4px #5E17EB; */
+    
     
 }
 .content h1{

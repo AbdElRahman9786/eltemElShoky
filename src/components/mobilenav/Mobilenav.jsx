@@ -13,6 +13,7 @@ const Mobilenav = ({setOpen}) => {
           <li><Link to='/Home'>Home</Link></li>
           <li><Link to='/AccountInfo'>AccountInfo</Link></li>
           <li><Link to='/Recomndation'>Recomndation</Link></li>
+          <li><Link to='/perfume'>perfumes</Link></li>
           <li><Link to='/questioner'>questioner</Link></li>
           <li>< Link to='/'>Log Out</Link></li>
         </ul>

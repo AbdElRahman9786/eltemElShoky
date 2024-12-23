@@ -8,7 +8,7 @@ ul{
     left: 0;
     right: 0;
     padding: 30px;
-    animation: drop 3s ease-in-out;
+    animation: drop 1s ease-in-out;
 }
 @keyframes drop {
     0% {

@@ -1,45 +1,150 @@
+/* Container Styling for QuestionnaireForm */
+.Qcontainer {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: black;
+}
 
-.container {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    color: black;
+.Qselect,
+.Qinput,
+.Qbutton {
+  font-size: 16px;
+  padding: 8px;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.Qtable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.Qth,
+.Qtd {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.Qth {
+  background-color: #f0f0f0;
+}
+
+.Qbutton {
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.Qbutton:hover {
+  background-color: #0056b3;
+  transition: background-color 0.3s ease;
+}
+
+.Qbutton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .Qcontainer {
+    padding: 15px;
+    margin: 10px;
+    max-width: 100%;
   }
-  
-  select,
-  input,
-  button {
-    font-size: 16px;
-    padding: 8px;
-    margin: 5px 0;
+
+  .Qtitle {
+    font-size: 24px;
   }
-  
-  table {
+
+  .Qselect,
+  .Qinput,
+  .Qbutton {
+    font-size: 14px;
+    padding: 10px;
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
   }
-  
-  th, td {
-    border: 1px solid #ccc;
+
+  .Qtable {
+    font-size: 14px;
+  }
+
+  .Qth,
+  .Qtd {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Qcontainer {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .Qtitle {
+    font-size: 20px;
+  }
+
+  .Qselect,
+  .Qinput,
+  .Qbutton {
+    font-size: 12px;
     padding: 8px;
-    text-align: left;
+    width: 100%;
   }
-  
-  th {
-    background-color: #f0f0f0;
+
+  .Qtable {
+    font-size: 12px;
   }
-  
-  button {
-    margin-top: 10px;
-    cursor: pointer;
+
+  .Qth,
+  .Qtd {
+    padding: 6px;
   }
-  
-  button:hover {
-    background-color: #ddd;
+
+  .Qbutton {
+    font-size: 14px;
   }
-  
+}
+
+@media (max-width: 320px) {
+  .Qcontainer {
+    padding: 8px;
+    margin: 5px;
+  }
+
+  .Qtitle {
+    font-size: 18px;
+  }
+
+  .Qselect,
+  .Qinput,
+  .Qbutton {
+    font-size: 12px;
+    padding: 6px;
+    width: 100%;
+  }
+
+  .Qtable {
+    font-size: 10px;
+  }
+
+  .Qth,
+  .Qtd {
+    padding: 4px;
+  }
+
+  .Qbutton {
+    font-size: 12px;
+  }
+}

@@ -9,7 +9,7 @@ import { apiUrl } from '../../utils.js';
 const Questioner = () => {
     const [questioner,setQuestioner]=useState([]);
     useEffect(()=>{
-        axios.get(`${apiUrl}/questionaire`,config).then((res)=>setQuestioner(res.data.questionnaires));
+        axios.get(`${apiUrl}/questionaire?take=100`,config).then((res)=>setQuestioner(res.data.questionnaires));
     },[])
     
   return (

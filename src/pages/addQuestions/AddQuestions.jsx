@@ -4,6 +4,7 @@ import styles from './addQuestions.module.css';
 import { apiUrl } from '../../utils.js';
 import Cookies from 'js-cookie';
 import {config} from '../../App.jsx'
+import Swal from 'sweetalert2';
 
 
 const QuestionnaireForm = () => {
@@ -53,25 +54,36 @@ const QuestionnaireForm = () => {
       .post(`${apiUrl}/questionaire/${selectedQuestionnaire}/questions`, {
         "questions": questions,
       },Postconfig)
-      .then(() => {
-        alert('Questions added successfully!');
+      .then((res) => {
+        Swal.fire({
+          icon: "success",
+          title: res.data.message,
+      });
+      
         setQuestions([{ questionText: '', questionType: 'text', isRequired: false }]);
       })
-      .catch((error) => {
-        console.error('Error adding questions:', error);
-        alert('Failed to add questions.');
+      .catch((err) => {
+       
+          Swal.fire({
+              icon: "error",
+              title: "Error",
+              text: err.response.data.message,
+              
+          });
+      
+        console.error('Error adding questions:', err);
       });
   };
 
   return (
-    <div className={styles.container}>
-      <h1>Add Questions to Questionnaire</h1>
+    <div className={styles.Qcontainer}>
+      <h1 className={styles.Qtitle}>Add Questions to Questionnaire</h1>
       <label htmlFor="questionnaire">Select Questionnaire:</label>
       <select
         id="questionnaire"
         value={selectedQuestionnaire}
         onChange={(e) => setSelectedQuestionnaire(e.target.value)}
-        className={styles.select}
+        className={styles.Qselect}
       >
         <option value="">-- Select a Questionnaire --</option>
         {questionnaires.map((q) => (
@@ -82,55 +94,55 @@ const QuestionnaireForm = () => {
       </select>
 
       <h2>Questions</h2>
-      <table className={styles.table}>
+      <table className={styles.Qtable}>
         <thead>
           <tr>
-            <th>Question Text</th>
-            <th>Question Type</th>
-            <th>Required</th>
+            <th className={styles.Qth}>Question Text</th>
+            <th className={styles.Qth}>Question Type</th>
+            <th className={styles.Qth}>Required</th>
           </tr>
         </thead>
         <tbody>
           {questions.map((question, index) => (
             <tr key={index}>
-              <td>
+              <td className={styles.Qtd}>
                 <input
                   type="text"
                   value={question.questionText}
                   onChange={(e) =>
                     handleQuestionChange(index, 'questionText', e.target.value)
                   }
-                  className={styles.input}
+                  className={styles.Qinput}
                 />
               </td>
-              <td>
+              <td className={styles.Qtd}>
                 <select
                   value={question.questionType}
                   onChange={(e) =>
                     handleQuestionChange(index, 'questionType', e.target.value)
                   }
-                  className={styles.select}
+                  className={styles.Qselect}
                 >
                   <option value="text">Text</option>
                   <option value="number">Number</option>
                 </select>
               </td>
-              <td>
+              <td className={styles.Qtd}>
                 <input
                   type="checkbox"
                   checked={question.isRequired}
                   onChange={(e) =>
                     handleQuestionChange(index, 'isRequired', e.target.checked)
                   }
-                  className={styles.checkbox}
+                  className={styles.Qcheckbox}
                 />
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      <button onClick={addQuestion} className={styles.button}>Add Question</button>
-      <button onClick={handleSubmit} className={styles.button}>Add</button>
+      <button onClick={addQuestion} className={styles.Qbutton}>Add Question</button>
+      <button onClick={handleSubmit} className={styles.Qbutton}>Add</button>
     </div>
   );
 };

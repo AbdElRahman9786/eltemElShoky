@@ -13,6 +13,8 @@ import ChangeUserName from './pages/chamngeusername/ChangeUserName';
 import AddQuestions from '../src/pages/addQuestions/AddQuestions.jsx'
 import { Recomendation } from './pages/recomendation/Recomendation';
 import Dashboard from './pages/dashboard/dashboard';
+import PerfumeList from './pages/perfume/PerfumeList.jsx'
+import PerfumeDetails from './pages/perfume/PerfumeDetails.jsx'
 export const config = {
   headers: {
     "Content-Type": "application/json",
@@ -75,7 +77,20 @@ function App() {
        <Route path='/addquestions' element={
         <AddQuestions/>
       }/>
+     <Route path='/perfume' element={
+          <Guard>
+            <PerfumeList />
+          </Guard>
+        } />
+        <Route path='/perfume/:perfume_Id' element={
+          <Guard>
+            <PerfumeDetails />
+          </Guard>
+        } />
+    
+      
     </Routes> 
+
     
     </>
   )

@@ -11,10 +11,24 @@ const PerfumeDetails = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get(`${apiUrl}/perfume/${perfume_Id}`,config)
+        axios
+            .get(`${apiUrl}/perfume/${perfume_Id}`, config)
             .then(response => setPerfume(response.data.perfume))
             .catch(error => setError(error.response?.data?.message || 'An error occurred'));
     }, [perfume_Id]);
+
+    const renderStars = (rating) => {
+        const filledStars = Math.floor(rating);
+        const halfStar = rating % 1 >= 0.5;
+        const emptyStars = 5 - filledStars - (halfStar ? 1 : 0);
+        return (
+            <>
+                {'★'.repeat(filledStars)}
+                {halfStar && '☆'}
+                {'☆'.repeat(emptyStars)}
+            </>
+        );
+    };
 
     if (error) {
         return <p style={{ color: 'red' }}>{error}</p>;
@@ -28,16 +42,21 @@ const PerfumeDetails = () => {
         <div className={styles.perfumePage}>
             <div className={styles.perfumeContent}>
                 <h1>{perfume.perfume_Name}</h1>
+                <img
+                    src={perfume.perfume_Link}
+                    alt={perfume.perfume_Name}
+                    className={styles.perfumeImageDETAILS}
+                />
                 <p><strong>Brand:</strong> {perfume.perfume_Brand}</p>
                 <p><strong>Description:</strong> {perfume.perfume_description}</p>
-                <p><strong>Rating:</strong> {perfume.perfume_rating}</p>
+                <p><strong>Rating:</strong> <span className={styles.ratingStarsDETAILS}>{renderStars(perfume.perfume_rating)}</span></p>
                 <a
-                    className={styles.perfumeButton}
+                    className={styles.perfumeButtonDETAILS}
                     href={perfume.perfume_Link}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    More Details
+                    View More
                 </a>
             </div>
         </div>
